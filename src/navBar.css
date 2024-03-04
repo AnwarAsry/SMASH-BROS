@@ -1,0 +1,25 @@
+nav {
+  height: 80px;
+  min-height: 50px;
+  max-height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(127, 17, 17);
+}
+nav ul {
+  display: flex;
+  gap: 200px;
+  list-style: none;
+}
+nav ul a {
+  font-family: sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: grey;
+  text-decoration: none;
+  transition: opacity ease-in-out 100ms;
+}
+nav ul a:hover {
+  opacity: 0.5;
+}/*# sourceMappingURL=navBar.css.map */

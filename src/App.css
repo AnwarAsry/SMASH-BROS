@@ -1,0 +1,44 @@
+@font-face {
+  font-family: "snes";
+  src: url("./fonts/snes/SNES Italic.ttf");
+  font-weight: italic;
+}
+main .intro {
+  display: block;
+  text-align: center;
+  background-color: greenyellow;
+}
+main .intro__title {
+  height: 300px;
+  line-height: 400px;
+  font-family: snes;
+  font-size: 2.5rem;
+}
+main .intro__top-picks {
+  padding: 30px 0;
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  background-color: blue;
+}
+main .intro__top-picks .player_card {
+  width: 200px;
+  text-align: center;
+  transition: all ease-in-out 200ms;
+  border: 1px solid black;
+  border-radius: 20px;
+}
+main .intro__top-picks .player_card img {
+  display: block;
+  width: 100%;
+}
+main .intro__top-picks .player_card p {
+  padding-top: 10px;
+  border-top: 1px solid black;
+  font-family: snes;
+  font-size: 2rem;
+}
+main .intro__top-picks .player_card:hover {
+  cursor: pointer;
+  scale: 1.1;
+}/*# sourceMappingURL=App.css.map */

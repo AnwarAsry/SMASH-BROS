@@ -1,0 +1,29 @@
+@mixin playerCard {
+    .player_card {
+        width: 200px;
+        position: relative;
+        border: 1px solid black;
+        border-radius: 20px;
+        text-align: center;
+        transition: all ease-in-out 200ms;
+            
+        img {
+            width: 100%;
+            display: block;
+        }
+
+        p {
+            padding-top: 10px;
+            border-top: 1px solid black;
+            font-family: snes;
+            font-size: 2rem;
+        }
+
+        &:hover {
+            cursor: pointer;
+            // scale: 1.1;
+            box-shadow: 0 0 12px 0 black;
+            transform: translateY(-15px) scale(1.1);
+        }
+    }
+}
