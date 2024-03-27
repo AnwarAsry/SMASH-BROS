@@ -1,6 +1,8 @@
-import './App.scss'
+import '../App.scss'
+import './character/character.tsx'
 // import './fonts/snes/SnesItalic-1G9Be.ttf';
-import pikachu from './assets/pikachu_ssbu.jpeg'
+// import pikachu from '../assets/pikachu_ssbu.jpeg'
+import Character from './character/character.tsx'
 
 
 function App() {
@@ -29,23 +31,16 @@ function App() {
             <h2 id='title'>Top Players</h2>
           </div>
           <div className='topPlayers__top-picks'>
-            <div className="player_card">
-              <img className='player_card__pict' src={pikachu} alt="pikachu" />
-              <p className="player-card__name">Pikachu</p>
-            </div>
-            <div className="player_card">
-              <img className='player_card__pict' src={pikachu} alt="pikachu" />
-              <p className="player-card__name">Pikachu</p>
-            </div>
-            <div className="player_card">
-              <img className='player_card__pict' src={pikachu} alt="pikachu" />
-              <p className="player-card__name">Pikachu</p>
-            </div>
+            <Character />
+            <Character />
+            <Character />
           </div>
         </section>
       </main>
     </>
   )
 }
+
+
 
 export default App
