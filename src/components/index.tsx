@@ -5,7 +5,7 @@ import './character/character.tsx'
 import Character from './character/character.tsx'
 
 
-function App() {
+function Index() {
 
   return (
     <>
@@ -43,4 +43,4 @@ function App() {
 
 
 
-export default App
+export default Index

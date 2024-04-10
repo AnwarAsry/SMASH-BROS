@@ -16,9 +16,12 @@ main {
         
         &__title {
             height: 250px;
-            line-height: 250px;
+            // line-height: 250px;
             font-family: snes;
             font-size: 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .shortcuts {
@@ -26,8 +29,12 @@ main {
                 margin-bottom: 70px;
 
                 form {
+                    padding: 0 15px;
+
                     #searchInp {
-                        width: 400px;
+                        width: 100%;
+                        min-width: 220px;
+                        max-width: 400px;
                         padding: 10px 20px;
                         outline: none;
                         border: 2px solid black;
@@ -45,6 +52,7 @@ main {
             &__btn {
                 padding: 0 30px;
                 display: flex;
+                flex-wrap: wrap;
                 justify-content: center;
                 gap: 100px;
 
@@ -53,8 +61,8 @@ main {
                 }
 
                 .btn {
-                    min-width: 20%;
-                    width: 300px;
+                    width: 100%;
+                    min-width: 164px;
                     max-width: 300px;
                     padding: 15px;
                     border: none;
