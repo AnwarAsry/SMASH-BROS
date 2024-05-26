@@ -16,12 +16,13 @@ main {
         
         &__title {
             height: 250px;
-            // line-height: 250px;
-            font-family: snes;
-            font-size: 2.5rem;
             display: flex;
             align-items: center;
             justify-content: center;
+            font-family: snes;
+            font-size: 2.5rem;
+            letter-spacing: .12rem;
+            color: v.$primary-white;
         }
 
         .shortcuts {
@@ -88,6 +89,8 @@ main {
         &__title {
             font-family: snes;
             font-size: 2.5rem;
+            letter-spacing: .12rem;
+            color: v.$primary-white;
         }
         
         &__top-picks {
@@ -98,7 +101,7 @@ main {
             grid-template-columns: repeat(6, 1fr);
             gap: 80px;
 
-            @include mx.playerCard;
+            @include mx.playerCard(v.$primary-white);
 
             @media screen and (max-width: 800px) {
                 display: flex;
@@ -118,7 +121,6 @@ main {
             .player_card:last-child:nth-child(3n - 2) {
                 grid-column-end: 5;
             }
-
 
             .player_card {
                 grid-column: span 2;

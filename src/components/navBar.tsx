@@ -1,26 +1,26 @@
 import '../navBar.scss'
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Navigate,
-} from "react-router-dom";
+// import {
+//   BrowserRouter as Router,
+//   Routes,
+//   Route,
+//   Navigate,
+// } from "react-router-dom";
 
 // import Home component
-import Fighters from "./fighters";
+// import Fighters from "./fighters";
 import logo from "./../../public/SVG/Rityta 2.svg";
+import hamIcon from "./../../public/SVG/bars-solid.svg";
 
-const navNames = ['Characters', 'Stages', 'Spirits']
+// const navNames = ['Characters', 'Stages', 'Spirits']
 
 function Navbar() {
-  // navLinksHtml('navLinks')
   return (
     <>
       <header>
         <div className='logoCont'>
           <img className='navLogoCont__logo' id='logo' src={logo} alt="name" />
         </div>
-        <nav>
+        <nav id='nav'>
           {/* <Router>
             <Routes>
               <Route path="/" element={<Fighters />}
@@ -33,20 +33,18 @@ function Navbar() {
             <li><a href="#Characters">spirits</a></li>
           </ul>
         </nav>
+        <div className='hamBtn'>
+          <img id='menuIcon' src={hamIcon} alt="" />
+        </div>
       </header>
     </>
   )
 }
 
-// function navLinksHtml(listID: string) {
-//   navNames.forEach(name => {
-//     const list = document.getElementById(listID)
-//     const li = document.createElement('li');
-//     const link = document.createElement('a');
-//     link.innerHTML = name;
-//     li.appendChild(link);
-//     list?.appendChild(li)
-//   })
-// }
+const menuIcon = document.getElementById("menuIcon");
+const navTag = document.getElementById("nav");
+menuIcon?.addEventListener("click", () => {
+  navTag?.classList.toggle("sideNav")
+})
 
 export default Navbar
