@@ -1,8 +1,8 @@
 import '../App.scss'
-import './character/character.tsx'
+import './character.tsx'
 // import './fonts/snes/SnesItalic-1G9Be.ttf';
 // import pikachu from '../assets/pikachu_ssbu.jpeg'
-import Character from './character/character.tsx'
+import Character from './character.tsx'
 
 
 function Index() {

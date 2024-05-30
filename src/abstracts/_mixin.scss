@@ -1,30 +1,89 @@
+// @mixin playerCard($textColor) {
+//     .player_card {
+//         width: 200px;
+//         position: relative;
+//         border-radius: 20px;
+//         border: 1px solid black;
+//         text-align: center;
+//         transition: all ease-in-out 200ms;
+            
+//         img {
+//             width: 100%;
+//             display: block;
+//         }
+
+//         p {
+//             padding-top: 10px;
+//             border-top: 1px solid black;
+//             font-family: snes;
+//             font-size: 2rem;
+//             letter-spacing: .12rem;
+//             color: $textColor;
+//         }
+
+//         &:hover {
+//             cursor: pointer;
+//             box-shadow: 0 0 4px 0 rgb(45, 45, 45);
+//             transform: translateY(-15px) scale(1.05);
+//         }
+//     }
+// }
 @mixin playerCard($textColor) {
     .player_card {
         width: 200px;
+        height: 243px;
         position: relative;
         border-radius: 20px;
-        box-shadow: 0 0 4px black;
+        border: 1px solid black;
         text-align: center;
-        transition: all ease-in-out 200ms;
+        // transition: all ease-in-out 200ms;
+        transition: all 0.5s;
             
         img {
             width: 100%;
+            height: 100%;
             display: block;
+            object-fit: cover;
         }
 
         p {
             padding-top: 10px;
-            border-top: 1px solid black;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 8px;
             font-family: snes;
             font-size: 2rem;
             letter-spacing: .12rem;
             color: $textColor;
+            transition: transform 0.5s;
         }
 
         &:hover {
             cursor: pointer;
-            box-shadow: 0 0 12px 0 black;
-            transform: translateY(-15px) scale(1.1);
+            box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+            transform: translateY(-15px) scale(1.05);
+        }
+
+        &:hover p {
+            transform: translate(0px, -20px);
+        }
+
+        &::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 20px;
+            opacity: 0;
+            transition: all 0.5s;
+            background-image: linear-gradient(to bottom, transparent 46%, rgba(12, 13, 19, 0.5) 68%, rgba(12, 13, 19) 97%);
+        }
+
+        &:hover::before {
+            opacity: 1;
         }
     }
 }

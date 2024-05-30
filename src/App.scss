@@ -38,7 +38,7 @@ main {
                         max-width: 400px;
                         padding: 10px 20px;
                         outline: none;
-                        border: 2px solid black;
+                        border: none;
                         border-radius: 200px;
                         font-size: 1.2rem;
                         transition: all 30ms ease-in-out;
@@ -75,7 +75,6 @@ main {
                     
                     &:hover {
                         cursor: pointer;
-                        scale: 1.1;
                         background-color: v.$hover-red;
                     }
                 }
