@@ -33,10 +33,8 @@
         width: 200px;
         height: 243px;
         position: relative;
-        border-radius: 20px;
-        border: 1px solid black;
+        border-radius: 16px;
         text-align: center;
-        // transition: all ease-in-out 200ms;
         transition: all 0.5s;
             
         img {
@@ -63,10 +61,10 @@
             cursor: pointer;
             box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
             transform: translateY(-15px) scale(1.05);
-        }
 
-        &:hover p {
-            transform: translate(0px, -20px);
+            p {
+                transform: translate(0px, -20px);
+            }
         }
 
         &::before {
@@ -76,7 +74,7 @@
             position: absolute;
             top: 0;
             left: 0;
-            border-radius: 20px;
+            border-radius: 16px;
             opacity: 0;
             transition: all 0.5s;
             background-image: linear-gradient(to bottom, transparent 46%, rgba(12, 13, 19, 0.5) 68%, rgba(12, 13, 19) 97%);
@@ -84,6 +82,21 @@
 
         &:hover::before {
             opacity: 1;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url(./assets/CharacterBackground.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            z-index: -10;
+            border-radius: 16px;
         }
     }
 }

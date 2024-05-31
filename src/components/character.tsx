@@ -1,5 +1,6 @@
 import { MouseEvent } from 'react'
 import pikachu from '../assets/pikachu_ssbu.jpeg'
+// import image from '../assets/CharacterBackground.png'
 
 function Character() {
     const handleShowCharacter = (e: MouseEvent) => {
