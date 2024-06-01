@@ -1,11 +1,32 @@
+import { useState } from 'react'
 import '../App.scss'
 import './character.tsx'
 // import './fonts/snes/SnesItalic-1G9Be.ttf';
 // import pikachu from '../assets/pikachu_ssbu.jpeg'
 import Character from './character.tsx'
+import { ICharacter } from '../models/ICharacter.ts';
 
 
 function Index() {
+
+  const [characters, setCharacters] = useState<ICharacter[]>([{
+    id: "1",
+    name: "pikachu",
+    imgURL: "hej",
+    combos: []
+  },
+  {
+    id: "2",
+    name: "sonic",
+    imgURL: "hej",
+    combos: []
+  },
+  {
+    id: "3",
+    name: "mario",
+    imgURL: "hej",
+    combos: []
+  }]);
 
   return (
     <>
@@ -31,9 +52,7 @@ function Index() {
             <h2 id='title'>Top Players</h2>
           </div>
           <div className='topPlayers__top-picks'>
-            <Character />
-            <Character />
-            <Character />
+            <Character characters={characters}/>
           </div>
         </section>
       </main>
