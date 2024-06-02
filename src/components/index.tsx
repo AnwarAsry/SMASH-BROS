@@ -5,28 +5,21 @@ import './character.tsx'
 // import pikachu from '../assets/pikachu_ssbu.jpeg'
 import Character from './character.tsx'
 import { ICharacter } from '../models/ICharacter.ts';
+import { getAllCharacters } from '../services/characterService.ts';
+// import { get } from '../services/serviceBase.ts';
 
 
 function Index() {
 
-  const [characters, setCharacters] = useState<ICharacter[]>([{
-    id: "1",
-    name: "pikachu",
-    imgURL: "hej",
-    combos: []
-  },
-  {
-    id: "2",
-    name: "sonic",
-    imgURL: "hej",
-    combos: []
-  },
-  {
-    id: "3",
-    name: "mario",
-    imgURL: "hej",
-    combos: []
-  }]);
+  const [characters, setCharacters] = useState<ICharacter[]>([]);
+
+  const sortOrder: string = "asc"
+  const sortBy: string = "id"
+
+  async function add () {
+    const rows = await getAllCharacters(sortBy, sortOrder)
+    setCharacters(rows)
+  }
 
   return (
     <>
@@ -55,6 +48,7 @@ function Index() {
             <Character characters={characters}/>
           </div>
         </section>
+        <button onClick={add}>ehgwjhkgrjkg</button>
       </main>
     </>
   )
