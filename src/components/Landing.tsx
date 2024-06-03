@@ -1,12 +1,8 @@
-import { useState } from 'react'
 import '../App.scss'
-import './character.tsx'
-// import './fonts/snes/SnesItalic-1G9Be.ttf';
-// import pikachu from '../assets/pikachu_ssbu.jpeg'
-import Character from './character.tsx'
+import Characters from './Characters.tsx'
+import { useEffect, useState } from 'react'
 import { ICharacter } from '../models/ICharacter.ts';
 import { getAllCharacters } from '../services/characterService.ts';
-// import { get } from '../services/serviceBase.ts';
 
 
 function Index() {
@@ -16,10 +12,15 @@ function Index() {
   const sortOrder: string = "asc"
   const sortBy: string = "id"
 
-  async function add () {
+  const addCharactersToState = async () => {
     const rows = await getAllCharacters(sortBy, sortOrder)
     setCharacters(rows)
   }
+
+  useEffect(() => {
+    if (characters.length > 0) return
+    addCharactersToState()
+  })
 
   return (
     <>
@@ -45,10 +46,9 @@ function Index() {
             <h2 id='title'>Top Players</h2>
           </div>
           <div className='topPlayers__top-picks'>
-            <Character characters={characters}/>
+            <Characters characters={characters}/>
           </div>
         </section>
-        <button onClick={add}>ehgwjhkgrjkg</button>
       </main>
     </>
   )

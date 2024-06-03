@@ -1,7 +1,7 @@
 // simport './character/character.tsx'
 // import './fonts/snes/SnesItalic-1G9Be.ttf';
 // import pikachu from '../assets/pikachu_ssbu.jpeg'
-import Character from './character.tsx'
+import Character from './Characters.tsx'
 
 
 function Fighters() {
