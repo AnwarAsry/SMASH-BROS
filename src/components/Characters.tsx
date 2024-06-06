@@ -3,18 +3,21 @@ import CharacterPresentation from './CharacterPresentation';
 
 interface IChild {
     characters: ICharacter[]
+    className: string
 }
 
-function Character(props: IChild) {
+function Characters({characters, className}: IChild) {
     return <>
-        {            
-            props.characters.map((char) =>
-                <CharacterPresentation character={char} key={char.id}/>
-            )
-        }
+        <div className={className}>
+            {            
+                characters.map((char) =>
+                    <CharacterPresentation character={char} key={char.id}/>
+                )
+            }
+        </div>
     </>
 }
 
 
 
-export default Character
+export default Characters

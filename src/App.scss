@@ -1,5 +1,5 @@
-@use 'abstracts/mixin'as mx;
-@use 'abstracts/variables'as v;
+@use './scss/abstracts/mixin'as mx;
+@use './scss/abstracts/variables'as v;
 
 @font-face {
     font-family: "snes";
@@ -25,58 +25,59 @@ main {
             color: v.$primary-white;
         }
 
-        .shortcuts {
-            &__search {
-                margin-bottom: 70px;
+        &__shortcuts {
+            display: flex;
+            flex-direction: column;
+            gap: 70px;
 
-                form {
-                    padding: 0 15px;
+        }
 
-                    #searchInp {
-                        width: 100%;
-                        min-width: 220px;
-                        max-width: 400px;
-                        padding: 10px 20px;
-                        outline: none;
-                        border: none;
-                        border-radius: 200px;
-                        font-size: 1.2rem;
-                        transition: all 30ms ease-in-out;
+        &__formSearch {
+            padding: 0 15px;
 
-                        &:hover {
-                            border-color: v.$hover-red;
-                        }
-                    }
+            &-input {
+                width: 100%;
+                min-width: 220px;
+                max-width: 400px;
+                padding: 10px 20px;
+                outline: none;
+                border: none;
+                border-radius: 200px;
+                font-size: 1.2rem;
+                transition: all 30ms ease-in-out;
+
+                &:hover {
+                    border-color: v.$hover-red;
                 }
             }
+        }
 
-            &__btn {
-                padding: 0 30px;
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 100px;
+        &__btns {
+            padding: 0 30px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 100px;
 
-                @media screen and (max-width: 800px) {
-                    gap: 20px;
-                }
+            @media screen and (max-width: 800px) {
+                gap: 20px;
+            }
 
-                .btn {
-                    width: 100%;
-                    min-width: 164px;
-                    max-width: 300px;
-                    padding: 15px;
-                    border: none;
-                    border-radius: 300px;
-                    font-size: 1.5rem;
-                    font-weight: 600;
-                    background-color: v.$primary-red;
-                    transition: all ease-in-out 200ms;
+            &-btn {
+                width: 100%;
+                min-width: 164px;
+                max-width: 300px;
+                padding: 15px;
+                border: none;
+                border-radius: 300px;
+                font-size: 1.5rem;
+                font-weight: 600;
+                background-color: v.$primary-red;
+                transition: all ease-in-out 200ms;
 
-                    &:hover {
-                        cursor: pointer;
-                        background-color: v.$hover-red;
-                    }
+                &:hover {
+                    cursor: pointer;
+                    background-color: v.$hover-red;
                 }
             }
         }
@@ -109,20 +110,20 @@ main {
             }
 
             // Dealing with 2 orphan items
-            .player_card:last-child:nth-child(3n - 1) {
+            .playerCard:last-child:nth-child(3n - 1) {
                 grid-column-end: -2;
             }
 
-            .player_card:nth-last-child(2):nth-child(3n + 1) {
+            .playerCard:nth-last-child(2):nth-child(3n + 1) {
                 grid-column-end: 4;
             }
 
             // Dealing with single orphan
-            .player_card:last-child:nth-child(3n - 2) {
+            .playerCard:last-child:nth-child(3n - 2) {
                 grid-column-end: 5;
             }
 
-            .player_card {
+            .playerCard {
                 grid-column: span 2;
             }
         }

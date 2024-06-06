@@ -1,4 +1,6 @@
-import '../navBar.scss'
+import '../scss/navBar.scss'
+import hamIcon from "./../../public/SVG/bars-solid.svg";
+
 // import {
 //   BrowserRouter as Router,
 //   Routes,
@@ -6,45 +8,25 @@ import '../navBar.scss'
 //   Navigate,
 // } from "react-router-dom";
 
-// import Home component
-// import Fighters from "./fighters";
-import logo from "./../../public/SVG/Rityta 2.svg";
-import hamIcon from "./../../public/SVG/bars-solid.svg";
-
-// const navNames = ['Characters', 'Stages', 'Spirits']
-
 function Navbar() {
-  return (
-    <>
-      <header>
-        <div className='logoCont'>
-          <img className='navLogoCont__logo' id='logo' src={logo} alt="name" />
-        </div>
-        <nav id='nav'>
-          {/* <Router>
-            <Routes>
-              <Route path="/" element={<Fighters />}
-              />
-            </Routes>
-          </Router> */}
-          <ul id='navLinks'>
-            <li><a href="#Characters">characters</a></li>
-            <li><a href="#Characters">stages</a></li>
-            <li><a href="#Characters">spirits</a></li>
-          </ul>
+  return <>
+        <nav id='nav' className='nav'>
+            {/* <Router>
+                <Routes>
+                  <Route path="/" element={<Fighters />}
+                  />
+                </Routes>
+              </Router> */}
+            <ul id='navLinks' className='nav__list'>
+                <li className='nav__item'><a href="#Characters">characters</a></li>
+                <li className='nav__item'><a href="#Characters">stages</a></li>
+                <li className='nav__item'><a href="#Characters">spirits</a></li>
+            </ul>
+            <div className='nav__hamBtn'>
+                <img id='menuIcon' src={hamIcon} alt="" />
+            </div>
         </nav>
-        <div className='hamBtn'>
-          <img id='menuIcon' src={hamIcon} alt="" />
-        </div>
-      </header>
     </>
-  )
 }
-
-const menuIcon = document.getElementById("menuIcon");
-const navTag = document.getElementById("nav");
-menuIcon?.addEventListener("click", () => {
-  navTag?.classList.toggle("sideNav")
-})
 
 export default Navbar
