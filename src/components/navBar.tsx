@@ -1,4 +1,4 @@
-import '../scss/navBar.scss'
+import '../scss/NavBar.scss'
 import hamIcon from "./../../public/SVG/bars-solid.svg";
 
 // import {

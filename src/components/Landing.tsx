@@ -1,26 +1,14 @@
 import '../App.scss'
 import Characters from './Characters.tsx'
-import { useEffect, useState } from 'react'
 import { ICharacter } from '../models/ICharacter.ts';
-import { getAllCharacters } from '../services/characterService.ts';
 
 
-function Index() {
+interface IChild {
+  characters: ICharacter[]
+}
 
-  const [characters, setCharacters] = useState<ICharacter[]>([]);
 
-  const sortOrder: string = "asc"
-  const sortBy: string = "id"
-
-  const addCharactersToState = async () => {
-    const rows = await getAllCharacters(sortBy, sortOrder)
-    setCharacters(rows)
-  }
-
-  useEffect(() => {
-    if (characters.length > 0) return
-    addCharactersToState()
-  })
+const LandingPage = ({characters}: IChild) => {
 
   return <>
     <main>
@@ -48,4 +36,4 @@ function Index() {
 
 
 
-export default Index
+export default LandingPage
