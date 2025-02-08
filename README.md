@@ -4,6 +4,9 @@
 
 This is the frontend of the **Smash Bros Combos** website, where users can look up different combos for various characters. The project is built using React and SCSS and configured with Vite for optimized development and build performance. This project aims to improve React skills while building a functional web application.
 
+Link to the server:
+https://github.com/AnwarAsry/Smash-Bros-Server
+
 ## Tech Stack
 
 - **React** - For building the user interface
