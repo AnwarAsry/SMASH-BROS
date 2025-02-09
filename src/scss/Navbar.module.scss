@@ -1,0 +1,29 @@
+@use "./abstracts/variables"as v;
+
+
+.Nav {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.NavLinks {
+    width: fit-content;
+    display: flex;
+    gap: v.$spacing-big;
+    list-style: none;
+}
+
+.NavItem {
+    padding: v.$spacing-x-sm v.$spacing-md;
+    border-radius: 8px;
+    font-family: sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    transition: all ease-in-out 100ms;
+
+    &:hover {
+        background-color: #0b2f41;
+    }
+}

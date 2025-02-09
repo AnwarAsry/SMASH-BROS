@@ -1,0 +1,32 @@
+@use './abstracts/variables'as v;
+
+
+.ShortcutsBtnsContiner {
+    padding: 0 v.$spacing-big;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: v.$spacing-x-huge;
+
+    @media screen and (max-width: 800px) {
+        gap: v.$spacing-big;
+    }
+}
+
+.PrimaryBtn {
+    cursor: pointer;
+    width: 100%;
+    max-width: 300px;
+    padding: v.$spacing-sm v.$spacing-md;
+    border: none;
+    border-radius: 100px;
+    outline: none;
+    font-size: 1.3rem;
+    font-weight: 600;
+    background-color: v.$primary-red;
+    transition: all ease-in-out 200ms;
+
+    &:hover {
+        background-color: v.$hover-red;
+    }
+}

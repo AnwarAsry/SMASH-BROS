@@ -1,0 +1,74 @@
+@use './abstracts/variables'as v;
+
+
+.PlayerCard {
+    width: 200px;
+    height: 243px;
+    position: relative;
+    border-radius: 16px;
+    text-align: center;
+    overflow: hidden;
+    transition: all 0.5s;
+
+    &:hover {
+        cursor: pointer;
+        box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+        transform: translateY(-15px) scale(1.05);
+
+        p {
+            transform: translate(0px, -20px);
+        }
+
+        &::before {
+            opacity: 1;
+        }
+    }
+
+    &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 16px;
+        opacity: 0;
+        transition: all 0.5s;
+        background-image: linear-gradient(to bottom, transparent 46%, rgba(12, 13, 19, 0.5) 68%, rgba(12, 13, 19) 97%);
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url(../../public/CharacterBackground.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: -10;
+        border-radius: 16px;
+    }
+}
+
+.PlayerCardPic {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.PlayerCardName {
+    padding-top: v.$spacing-sm;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: v.$spacing-x-sm;
+    font-family: snes;
+    font-size: 2rem;
+    letter-spacing: .12rem;
+    color: #fff;
+    transition: all 0.5s;
+}

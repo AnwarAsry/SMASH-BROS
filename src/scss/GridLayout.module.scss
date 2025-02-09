@@ -1,0 +1,38 @@
+@use './abstracts/variables'as v;
+
+
+.AllCharactersGrid {
+    width: 70%;
+    margin: v.$spacing-xxx-lg auto 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    gap: v.$spacing-xxx-big;
+}
+
+.TopPicksGrid {
+    width: fit-content;
+    margin: 0 auto;
+    padding: v.$spacing-xxx-big v.$spacing-big;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: v.$spacing-huge;
+
+    // Dealing with 2 orphan items
+    div:last-child:nth-child(3n - 1) {
+        grid-column-end: -2;
+    }
+
+    div:nth-last-child(2):nth-child(3n + 1) {
+        grid-column-end: 4;
+    }
+
+    // Dealing with single orphan
+    div:last-child:nth-child(3n - 2) {
+        grid-column-end: 5;
+    }
+
+    div {
+        grid-column: span 2;
+    }
+}

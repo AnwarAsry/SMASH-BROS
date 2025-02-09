@@ -1,0 +1,9 @@
+@use "./abstracts/variables"as v;
+
+
+.Header {
+    padding: 0 v.$spacing-big;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

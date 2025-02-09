@@ -3,8 +3,8 @@ import { useEffect, useState } from 'react'
 import { ICharacter } from './models/ICharacter.ts';
 import { getAllCharacters } from './services/characterService.ts';
 import Header from './components/Header.tsx';
-// import LandingPage from './components/Landing.tsx';
-import Fighters from './components/Fighters.tsx';
+import LandingPage from './components/Pages/Landing.tsx';
+import Fighters from './components/Pages/Fighters.tsx';
 
 
 function App() {
@@ -25,8 +25,8 @@ function App() {
 
     return <>
         <Header />
-        {/* <LandingPage characters={characters}/> */}
-        <Fighters characters={characters}/>
+        <LandingPage characters={characters} />
+        {/* <Fighters characters={characters} /> */}
     </>
 }
 

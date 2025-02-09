@@ -1,0 +1,34 @@
+@use './abstracts/variables'as v;
+
+
+.IntroWrapper {
+    margin-bottom: v.$spacing-x-lg;
+    padding: v.$spacing-xx-big 0;
+    display: block;
+    text-align: center;
+}
+
+.IntroTitle {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: snes;
+    font-size: 2.5rem;
+    letter-spacing: .12rem;
+    color: v.$primary-white;
+}
+
+.IntroShortcuts {
+    display: flex;
+    flex-direction: column;
+    gap: v.$spacing-x-lg;
+}
+
+.TopPlayersTitle {
+    font-family: snes;
+    font-size: 2.5rem;
+    text-align: center;
+    letter-spacing: .12rem;
+    color: v.$primary-white;
+}

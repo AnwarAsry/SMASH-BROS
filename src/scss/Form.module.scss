@@ -1,0 +1,19 @@
+@use './abstracts/variables'as v;
+
+
+.SearchForm {
+    width: 100%;
+    padding: 0 v.$spacing-big;
+    display: flex;
+    justify-content: center;
+}
+
+.SearchFormInput {
+    width: 100%;
+    max-width: 400px;
+    padding: v.$spacing-sm v.$spacing-big;
+    outline: none;
+    border: none;
+    border-radius: 200px;
+    font-size: 1.2rem;
+}
