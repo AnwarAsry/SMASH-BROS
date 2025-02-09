@@ -1,6 +1,7 @@
 import HeaderStyles from "@/styles/Header.module.scss"
 
-import { Navbar } from './Navbar.tsx';
+import { Navbar } from "./navBar"
+
 
 export const Header = () => {
   return <>
