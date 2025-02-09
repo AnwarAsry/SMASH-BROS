@@ -1,6 +1,6 @@
 interface GridLayoutProps {
     className: string
-    children: React.ReactNode
+    children?: React.ReactNode
 }
 
 export const GridLayout = ({ className, children }: GridLayoutProps) => {
