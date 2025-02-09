@@ -20,14 +20,17 @@ const LandingPage = () => {
   const sortBy: string = "id"
 
   const addCharactersToState = async () => {
-    const rows = await getAllCharacters(sortBy, sortOrder)
-    setCharacters(rows)
+    try {
+      const rows = await getAllCharacters(sortBy, sortOrder)
+      setCharacters(rows)
+    } catch (error) {
+      console.log("[FETCH ERROR] Could not fetch data:", error);
+    }
   }
 
   useEffect(() => {
-    if (characters.length > 0) return
     addCharactersToState()
-  })
+  }, [])
 
   return <>
     <section className={IntroStyles.IntroWrapper}>
