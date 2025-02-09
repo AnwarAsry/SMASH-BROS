@@ -1,26 +1,16 @@
 import NavbarStyles from "@/styles/Navbar.module.scss"
+import { Link } from "react-router-dom"
 
 
-function Navbar() {
+export const Navbar = () => {
   return <>
     <nav className={NavbarStyles.Nav}>
-      {/* <Router>
-                <Routes>
-                  <Route path="/" element={<Fighters />}
-                  />
-                </Routes>
-              </Router> */}
       <ul className={NavbarStyles.NavLinks}>
-        <li><a className={NavbarStyles.NavItem} href="/">Home</a></li>
-        <li><a className={NavbarStyles.NavItem} href="#characters">Characters</a></li>
-        <li><a className={NavbarStyles.NavItem} href="#stages">Stages</a></li>
-        <li><a className={NavbarStyles.NavItem} href="#spirits">Spirits</a></li>
+        <li><Link className={NavbarStyles.NavItem} to="/">Home</Link></li>
+        <li><Link className={NavbarStyles.NavItem} to="/characters">Characters</Link></li>
+        <li><Link className={NavbarStyles.NavItem} to="/stages">Stages</Link></li>
+        <li><Link className={NavbarStyles.NavItem} to="/spirits">Spirits</Link></li>
       </ul>
-      {/* <div className='nav__hamBtn'>
-        <img id='menuIcon' src={hamIcon} alt="" />
-      </div> */}
     </nav>
   </>
 }
-
-export default Navbar
