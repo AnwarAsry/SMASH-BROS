@@ -5,6 +5,7 @@ import Characters from "./Pages/Characters";
 import NotFound from "./Pages/NotFound";
 import Spirits from "./Pages/Spirits";
 import Stages from "./Pages/Stages";
+import CharacterPage from "./Pages/CharacterPage";
 
 export const router = createBrowserRouter(
     [
@@ -21,6 +22,10 @@ export const router = createBrowserRouter(
                 {
                     path: "/characters",
                     element: <Characters />,
+                },
+                {
+                    path: "/characters/:id",
+                    element: <CharacterPage />,
                 },
                 {
                     path: "/stages",
