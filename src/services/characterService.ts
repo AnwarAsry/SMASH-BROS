@@ -1,4 +1,4 @@
-import { IAPIResponse } from "../models/IAPIResponse";
+import { ApiCharacterRes, IAPIResponse } from "../models/IAPIResponse";
 import { ICharacter } from "../models/ICharacter";
 import { get } from "./serviceBase";
 
@@ -7,4 +7,11 @@ export const getAllCharacters = async (sortBy: string | "id", sortOrder: string 
 
     const data = await get<IAPIResponse>(url);
     return data.rows;
+};
+
+export const getCharacter = async (id: string): Promise<ICharacter> => {
+    const url = `http://localhost:3000/character/${id}`
+
+    const data = await get<ApiCharacterRes>(url);
+    return data.data;
 };
