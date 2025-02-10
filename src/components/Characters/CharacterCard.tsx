@@ -1,7 +1,8 @@
 import CharacterCardStyles from '@/styles/CharacterCard.module.scss';
 
 import { ICharacter } from '@/models/ICharacter';
-import { redirect } from 'react-router-dom';
+
+import { useNavigate } from 'react-router-dom';
 
 
 interface IChild {
@@ -9,8 +10,11 @@ interface IChild {
 }
 
 export const CharacterCard = ({ character }: IChild) => {
+
+    const navigate = useNavigate();
+
     return <>
-        <div className={CharacterCardStyles.PlayerCard} onClick={() => redirect("/characters/" + character.id)}>
+        <div className={CharacterCardStyles.PlayerCard} onClick={() => { navigate("/characters/" + character.id) }}>
             <img className={CharacterCardStyles.PlayerCardPic} src={character.imgURL} alt={character.name} />
             <p className={CharacterCardStyles.PlayerCardName}>{character.name}</p>
         </div>

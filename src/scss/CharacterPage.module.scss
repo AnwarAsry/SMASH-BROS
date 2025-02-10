@@ -1,0 +1,39 @@
+@use './abstracts/variables'as v;
+
+
+.Content {
+    margin-top: v.$spacing-huge;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: v.$spacing-xx-lg;
+}
+
+.Right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.ImageCard {
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url(../../public/CharacterBackground.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: -10;
+        border-radius: 16px;
+    }
+}
+
+.PageTitle {
+    font-size: 2.4rem;
+    letter-spacing: .12rem;
+}

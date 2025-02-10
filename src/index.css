@@ -5,5 +5,7 @@
 }
 
 body {
-  background-color: #08415C;
+  font-family: snes;
+  color: #fff;
+  background-color: #0d445c;
 }
