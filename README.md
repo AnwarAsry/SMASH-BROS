@@ -2,7 +2,9 @@
 
 ## Overview
 
-This is the frontend of the **Smash Bros Combos** website, where users can look up different combos for various characters. The project is built using React and SCSS and configured with Vite for optimized development and build performance. This project aims to improve React skills while building a functional web application.
+This is a small React application designed to help users look up different combos for various Smash Bros characters. It features a simple and responsive UI built with React, SCSS, and React Router, allowing users to navigate between character pages seamlessly.
+
+This project is part of a learning course focused on API development, where the client fetches combo data from a custom Node.js & Express backend connected to an SQL database. The goal is to improve frontend skills while gaining hands-on experience with API integration and dynamic data handling
 
 Link to the server:
 https://github.com/AnwarAsry/Smash-Bros-Server
