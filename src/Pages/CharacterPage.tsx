@@ -1,4 +1,5 @@
 import CharacterPageStyles from "@/styles/CharacterPage.module.scss"
+import ComingSoonStyles from "@/styles/ComingSoon.module.scss"
 
 import { ICharacter } from "@/models/ICharacter";
 import { getCharacter } from "@/services/characterService";
@@ -8,7 +9,11 @@ import { useParams } from "react-router-dom";
 
 
 function CharacterPage() {
-    const [character, setCharacter] = useState<ICharacter | null>();
+    const [character, setCharacter] = useState<ICharacter | null>({
+        id: "1",
+        name: "pikachu",
+        imgURL: "/assets/pikachu_ssbu.jpeg"
+    });
     const [isLoading, setIsLoading] = useState<boolean>(true);
 
     const { id } = useParams();
@@ -30,6 +35,8 @@ function CharacterPage() {
     }, [])
 
     if (character) {
+        console.log(character.imgURL);
+
         return <>
             <section className={CharacterPageStyles.Content}>
                 <div className={CharacterPageStyles.Right}>
@@ -41,6 +48,7 @@ function CharacterPage() {
                     <h1 className={CharacterPageStyles.PageTitle}>Character name: {character.name}</h1>
                     <div>
                         {/* Combos */}
+                        <p className={ComingSoonStyles.ComingSoon}>Combo Section coming soon</p>
                     </div>
                 </div>
             </section>

@@ -10,7 +10,13 @@ import { CharacterCard } from "@/components/Characters/CharacterCard";
 
 
 function Characters() {
-  const [characters, setCharacters] = useState<ICharacter[]>([]);
+  const [characters, setCharacters] = useState<ICharacter[]>([
+    {
+      id: "1",
+      name: "pikachu",
+      imgURL: "assets/pikachu_ssbu.jpeg"
+    }
+  ]);
 
   const sortOrder: string = "asc"
   const sortBy: string = "id"

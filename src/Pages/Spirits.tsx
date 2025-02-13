@@ -1,6 +1,9 @@
+import ComingSoonStyles from "@/styles/ComingSoon.module.scss"
+
+
 function Spirits() {
     return <>
-        <h2>Spirits Page</h2>
+        <p className={ComingSoonStyles.ComingSoon}>Spirits Page coming soon</p>
     </>
 }
 
