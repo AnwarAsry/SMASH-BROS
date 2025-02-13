@@ -9,11 +9,7 @@ import { useParams } from "react-router-dom";
 
 
 function CharacterPage() {
-    const [character, setCharacter] = useState<ICharacter | null>({
-        id: "1",
-        name: "pikachu",
-        imgURL: "/assets/pikachu_ssbu.jpeg"
-    });
+    const [character, setCharacter] = useState<ICharacter | null>();
     const [isLoading, setIsLoading] = useState<boolean>(true);
 
     const { id } = useParams();
